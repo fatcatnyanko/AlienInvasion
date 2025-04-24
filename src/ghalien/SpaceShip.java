@@ -19,25 +19,23 @@
 */
 package ghalien;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
- * Purpose: The reponsibility of Player is ...
+ * Purpose: The reponsibility of SpaceShip is ...
  *
- * Player is-a ...
- * Player is ...
+ * SpaceShip is-a ...
+ * SpaceShip is ...
  */
-public class Player extends JButton implements Moveable
+public class SpaceShip extends JButton implements Moveable
 {
-	private String name;
-	private int x; //horizontal location
-	private int y; //vertical location
-	//private Score score;
-	
-	public Player(String newName)
+	private int x;
+	private int y; 
+	private ImageIcon shipIcon = new ImageIcon("tempspaceship.jpg", "space ship");
+	public SpaceShip()
 	{
-		super(newName);
-		name = newName;
+		setIcon(shipIcon);
 	}
 	
 	/**
@@ -71,9 +69,5 @@ public class Player extends JButton implements Moveable
 	{
 		setLocation(x, y - 10);
 	}
-	
-	public String toString()
-	{
-		return name;
-	}
+
 }

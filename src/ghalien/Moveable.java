@@ -19,24 +19,31 @@
 */
 package ghalien;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
 /**
- * Purpose: The reponsibility of TestAlienInvasion is ...
+ * Purpose: The reponsibility of Moveable is ...
  *
- * TestAlienInvasion is-a ...
- * TestAlienInvasion is ...
+ * Moveable is-a ...
+ * Moveable is ...
  */
-class TestAlienInvasion
+public interface Moveable
 {
-
-	@Test
-	void testPlayer()
-	{
-		Player grace = new Player("Grace");
-		assertEquals("Grace", grace.toString());
-	}
-
+	/**
+	 * Purpose: move something to the left
+	 */
+	void moveLeft();
+	
+	/**
+	 * Purpose: move something to the right
+	 */
+	void moveRight();
+	
+	/**
+	 * Purpose: move something up
+	 */
+	void moveUp();
+	
+	/**
+	 * Purpose: move something to the right
+	 */
+	void moveDown();
 }

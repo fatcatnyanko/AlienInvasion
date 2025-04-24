@@ -19,24 +19,16 @@
 */
 package ghalien;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
 /**
- * Purpose: The reponsibility of TestAlienInvasion is ...
+ * Purpose: The reponsibility of AlienInvasionModel is ...
  *
- * TestAlienInvasion is-a ...
- * TestAlienInvasion is ...
+ * AlienInvasionModel is-a ...
+ * AlienInvasionModel is ...
  */
-class TestAlienInvasion
+public class AlienInvasionModel
 {
-
-	@Test
-	void testPlayer()
+	public AlienInvasionModel()
 	{
-		Player grace = new Player("Grace");
-		assertEquals("Grace", grace.toString());
+		
 	}
-
 }
