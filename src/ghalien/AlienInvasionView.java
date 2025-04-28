@@ -20,6 +20,7 @@
 package ghalien;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
@@ -42,7 +43,8 @@ public class AlienInvasionView extends JFrame
 		super("Alien Invasion"); //give JFrame a visible name
 		gameModel = model;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //will close when the "x" button in corner is clicked
-		setVisible(true); //allow us to see our jframe
+		setSize(800,800);
+		setResizable(false);
 		
 		this.setLayout(new BorderLayout());	//JFrame now has the Border layout (NSEW)
 		
@@ -52,15 +54,8 @@ public class AlienInvasionView extends JFrame
 		instructions.add(instructionLabel);
 		this.add(instructions, BorderLayout.WEST);
 		
-		//Ignore this for now. I was just playing around with buttons
-//		//Player panel + ship panel?
-//		JPanel playerShip = new JPanel(new GridLayout(2,2));
-//		playerShip.setSize(200,200);
-//		SpaceShip newShip = new SpaceShip();
-//		playerShip.add(newShip);
-//		Player newPlayer = new Player("Grace");
-//		playerShip.add(newPlayer);
-//		this.add(playerShip, BorderLayout.CENTER);
+		//Player panel + ship panel
+		this.add(new PlayerShipPanel(), BorderLayout.CENTER);
 		
 		//Score panel
 		JPanel scorePanel = new JPanel();
@@ -73,8 +68,7 @@ public class AlienInvasionView extends JFrame
 		JLabel authorLabel = new JLabel("Programmed by Grace Ho & Paul Montal");
 		author.add(authorLabel);
 		this.add(author, BorderLayout.SOUTH);
-		
-		pack();
+		setVisible(true); //allow us to see our jframe
 		
 	}
 	/**
