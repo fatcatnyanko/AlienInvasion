@@ -19,6 +19,8 @@
 */
 package ghalien;
 
+import java.awt.Graphics;
+
 /**
  * Purpose: The reponsibility of Moveable is ...
  *
@@ -30,20 +32,20 @@ public interface Moveable
 	/**
 	 * Purpose: move something to the left
 	 */
-	void moveLeft();
+	void moveLeft(Graphics g);
 	
 	/**
 	 * Purpose: move something to the right
 	 */
-	void moveRight();
+	void moveRight(Graphics g);
 	
 	/**
 	 * Purpose: move something up
 	 */
-	void moveUp();
+	void moveUp(Graphics g);
 	
 	/**
 	 * Purpose: move something to the right
 	 */
-	void moveDown();
+	void moveDown(Graphics g);
 }

@@ -22,6 +22,7 @@ package ghalien;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
@@ -55,7 +56,8 @@ public class AlienInvasionView extends JFrame
 		this.add(instructions, BorderLayout.WEST);
 		
 		//Player panel + ship panel
-		this.add(new PlayerShipPanel(), BorderLayout.CENTER);
+		PlayerShipPanel mainPanel = new PlayerShipPanel();
+		this.add(mainPanel, BorderLayout.CENTER);
 		
 		//Score panel
 		JPanel scorePanel = new JPanel();
@@ -69,6 +71,11 @@ public class AlienInvasionView extends JFrame
 		author.add(authorLabel);
 		this.add(author, BorderLayout.SOUTH);
 		setVisible(true); //allow us to see our jframe
+		
+	}
+	
+	public void updateGUI(Graphics g)
+	{
 		
 	}
 	/**

@@ -39,22 +39,27 @@ public class PlayerShipPanel extends JPanel
 {
 	public void paintComponent(Graphics g)
 	{
-//		ImageIcon shipIcon = new ImageIcon("tempspaceship.jpg", "space ship");
-//		//Image ship = "tempspaceship.jpg";
-//		g.drawOval(100, 100, 50, 50);
-		try
-		{
-			BufferedImage player = ImageIO.read(getClass().getResource("player.png"));
-			Image playerImage = player;
-			g.drawImage(playerImage, 100, 600, 150, 150,null);
-			BufferedImage ship = ImageIO.read(getClass().getResource("spaceship.png"));
-			Image shipImage = ship;
-			g.drawImage(shipImage, 100, 100, 150, 150, null);
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
+		Player newPlayer = new Player();
+		newPlayer.drawPlayerImage(g);
+		SpaceShip newShip = new SpaceShip();
+		newShip.drawSpaceShip(g);
+//			try
+//			{
+				
+				
+				//fail-safe code don't delete
+//				BufferedImage player = ImageIO.read(getClass().getResource("player.png"));
+//				Image playerImage = player;
+//				g.drawImage(playerImage, 100, 600, 150, 150,null);
+//				BufferedImage ship = ImageIO.read(getClass().getResource("spaceship.png"));
+//				Image shipImage = ship;
+//				g.drawImage(shipImage, 100, 100, 150, 150, null);
+//			}
+//			catch (IOException e)
+//			{
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 	}
 
 }

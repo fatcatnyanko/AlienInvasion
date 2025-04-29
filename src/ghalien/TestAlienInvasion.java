@@ -21,6 +21,8 @@ package ghalien;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.awt.Graphics;
+
 import org.junit.jupiter.api.Test;
 
 /**
@@ -31,12 +33,25 @@ import org.junit.jupiter.api.Test;
  */
 class TestAlienInvasion
 {
-
+//
+//	@Test
+//	void testPlayer()
+//	{
+//		Player grace = new Player("Grace");
+//		assertEquals("Grace", grace.toString());
+//	}
+	
 	@Test
 	void testPlayer()
 	{
-		Player grace = new Player("Grace");
+		Player grace = new Player();
+		grace.setName("Grace");
 		assertEquals("Grace", grace.toString());
+		
+		int xMove = 400;
+		int yMove = 400;
+		
+		//assertEquals(xMove - 50, grace.getXLocation());
 	}
 
 }
